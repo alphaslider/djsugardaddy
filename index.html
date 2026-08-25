@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Mark Sugar | VIP Boutique DJ & Entertainment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Fixed full-screen cinematic hero */
+        .hero-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            background-image: url('hero.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, #050505 0%, rgba(5,5,5,0.4) 50%, rgba(5,5,5,0.2) 100%);
+        }
+
+        /* Spacer to push content down so hero is fully visible first */
+        .hero-spacer {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Content Container */
+        .blinds-reveal {
+            position: relative;
+            z-index: 3;
+            background: #050505;
+            box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.9);
+            border-top: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="selection:bg-red-600 selection:text-white">
+
+    <!-- STAGE 1: IMMERSIVE FIXED HERO (No menu, no text, no CTA, clean image) -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        
+        <!-- Scroll indicator hint -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce opacity-80 z-10">
+            <span class="text-xs uppercase tracking-widest text-zinc-300 mb-2 font-heading">Scroll to Enter</span>
+            <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Invisible Spacer matching viewport height to allow natural scrolling into stage 2 -->
+    <div class="hero-spacer"></div>
+
+    <!-- STAGE 2: CONTENT SECTION -->
+    <section id="main-content" class="blinds-reveal min-h-screen py-24 px-6 md:px-16 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Bio & Branding Header -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/50 text-red-500 text-xs tracking-widest uppercase font-semibold">
+                        <span>Saskatchewan's Premier Selector</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white font-heading">
+                        DJ Mark Sugar <span class="text-red-600">in Saskatoon</span>
+                    </h2>
+                    <p class="text-xl text-zinc-300 font-light leading-relaxed">
+                        DJ Mark Sugar offers VIP DJ services with big pro sound and nightclub style dance floor lighting plus top skills for all occasions.
+                    </p>
+                    <div class="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
+                        <p class="text-red-400 font-semibold mb-2">Very request friendly!</p>
+                        <p class="text-zinc-400 text-sm">For 100’s of great reviews please search Google for <span class="text-white font-medium underline">"DJ Mark Sugar"</span></p>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5 bg-gradient-to-br from-zinc-900 to-black p-8 rounded-3xl border border-zinc-800 shadow-2xl space-y-6">
+                    <h3 class="text-lg font-bold text-white tracking-wide uppercase font-heading text-red-500">Endless Versatility</h3>
+                    <p class="text-zinc-300 text-sm leading-relaxed">
+                        Can play All Genres for All Ages / Music Videos / Nightclub / Weddings / Schools / Grads / Staff / Sports / Store / Special Events & More.
+                    </p>
+                    <div class="border-t border-zinc-800 pt-6">
+                        <p class="text-xs text-zinc-400 leading-relaxed">
+                            From sporting events for the NBA, to restaurant grand openings for Taco Bell, to car launch events for Lexus to MTV concert events. Big or small, DJ Mark Sugar does it ALL.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <span class="inline-block px-4 py-2 bg-red-600 text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg shadow-red-900/20">
+                            Over 25+ Years Experience • Voted Best DJ in Saskatoon
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLICK-TO-LOAD VIDEO SECTION (Bypasses Error 152 / Embedding Restrictions) -->
+            <div class="mb-24">
+                <div class="border-b border-zinc-800 pb-4 mb-10 flex justify-between items-end">
+                    <div>
+                        <span class="text-red-500 text-xs tracking-widest uppercase font-bold">Visual Archive</span>
+                        <h3 class="text-3xl font-bold text-white font-heading mt-1">Live Performance Feeds</h3>
+                    </div>
+                    <span class="text-zinc-500 text-sm hidden md:block">Boutique Sound & Stage Production</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Video 1 -->
+                    <div class="group bg-zinc-900/40 rounded-2xl overflow-hidden border border-zinc-800/80 hover:border-red-600/50 transition-all duration-300 shadow-xl">
+                        <div class="relative aspect-video w-full bg-black cursor-pointer flex items-center justify-center overflow-hidden" onclick="loadVideo(this, 'kpUfun9Z3ms', 59)">
+                            <img src="https://img.youtube.com/vi/kpUfun9Z3ms/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" alt="Video Thumbnail">
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors">
+                                <svg class="w-8 h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-zinc-200">DJ Mark Sugar Live from Mandalay Bay in Las Vegas</h4>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="group bg-zinc-900/40 rounded-2xl overflow-hidden border border-zinc-800/80 hover:border-red-600/50 transition-all duration-300 shadow-xl">
+                        <div class="relative aspect-video w-full bg-black cursor-pointer flex items-center justify-center overflow-hidden" onclick="loadVideo(this, 'HitlYFbaq_o', 0)">
+                            <img src="https://img.youtube.com/vi/HitlYFbaq_o/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" alt="Video Thumbnail">
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors">
+                                <svg class="w-8 h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-zinc-200">DJ Mark Sugar is Available for your Wedding, Staff Party or School Dance!</h4>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="group bg-zinc-900/40 rounded-2xl overflow-hidden border border-zinc-800/80 hover:border-red-600/50 transition-all duration-300 shadow-xl">
+                        <div class="relative aspect-video w-full bg-black cursor-pointer flex items-center justify-center overflow-hidden" onclick="loadVideo(this, '4M6PJlrOejc', 0)">
+                            <img src="https://img.youtube.com/vi/4M6PJlrOejc/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" alt="Video Thumbnail">
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors">
+                                <svg class="w-8 h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-zinc-200">Book your Wedding, Staff Party or School Dance with DJ Mark Sugar</h4>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="group bg-zinc-900/40 rounded-2xl overflow-hidden border border-zinc-800/80 hover:border-red-600/50 transition-all duration-300 shadow-xl">
+                        <div class="relative aspect-video w-full bg-black cursor-pointer flex items-center justify-center overflow-hidden" onclick="loadVideo(this, 'Hew1zrsu4uc', 0)">
+                            <img src="https://img.youtube.com/vi/Hew1zrsu4uc/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" alt="Video Thumbnail">
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors">
+                                <svg class="w-8 h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-zinc-200">What is a Mashup? Explained by DJ Mark Sugar</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FOOTER SECTION -->
+            <footer class="border-t border-zinc-800/80 pt-16 pb-12 text-center md:text-left">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div>
+                        <h4 class="text-lg font-bold text-white font-heading tracking-wide">DJ MARK SUGAR</h4>
+                        <p class="text-zinc-500 text-sm mt-1">DJ service available upon request 24/7</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-zinc-300 text-sm font-medium">Serving Saskatoon and all areas</p>
+                        <a href="mailto:bigdjsugar@gmail.com" class="text-red-500 hover:text-red-400 text-sm font-semibold mt-1 inline-block transition-colors">
+                            bigdjsugar@gmail.com
+                        </a>
+                    </div>
+                    
+                    <div class="flex justify-center md:justify-end space-x-6">
+                        <span class="text-xs tracking-wider uppercase text-zinc-400 font-semibold">
+                            Follow Social Media: <a href="#" class="text-white hover:text-red-500 transition-colors">@MarkSugar306</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="mt-12 text-center border-t border-zinc-900 pt-6 text-zinc-600 text-xs">
+                    &copy; 2026 DJ Mark Sugar. All Rights Reserved. Boutique Audio Experiences.
+                </div>
+            </footer>
+
+        </div>
+    </section>
+
+    <!-- Script to inject clean iframes on click, avoiding Error 152 pre-load issues -->
+    <script>
+        function loadVideo(container, videoId, startTime) {
+            let startParam = startTime ? `&start=${startTime}` : '';
+            container.innerHTML = `<iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1${startParam}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        }
+    </script>
+</body>
+</html>
